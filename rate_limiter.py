@@ -13,7 +13,7 @@ from flask import request, jsonify
 
 
 # Configuration via environment variables
-MAX_REQUESTS = int(os.getenv("RATE_LIMIT", "30"))  # requests per window
+MAX_REQUESTS = int(os.getenv("RATE_LIMIT", "600"))  # requests per window
 WINDOW_SECONDS = int(os.getenv("RATE_WINDOW", "60"))  # window size in seconds
 
 # Thread-safe storage: {ip: [timestamp, ...]}
